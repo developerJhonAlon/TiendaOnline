@@ -51,6 +51,9 @@
 				<img src="<?= base_url()?>plantilla/img/comput1.png" >
 
 				<img src="<?= base_url()?>plantilla/img/comput2.png" >
+
+				<h2>Productos2</h2>
+				
 				
 			</div>
 		</div>

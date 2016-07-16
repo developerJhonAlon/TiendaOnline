@@ -47,7 +47,10 @@
 			<div class="col-md-4 col-md-offset-4">
 				
 				<h2>Productos</h2>
-				
+				<!-- Esto se traduce haci <img src="localhost:81/plantilla/img/comput1.png" >-->
+				<img src="<?= base_url()?>plantilla/img/comput1.png" >
+
+				<img src="<?= base_url()?>plantilla/img/comput2.png" >
 				
 			</div>
 		</div>
@@ -60,6 +63,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
      
 	<!--Eventos-->
+
 
 </body>
 </html>

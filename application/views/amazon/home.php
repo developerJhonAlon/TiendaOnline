@@ -1,7 +1,4 @@
 <body>
-
-
-
 	
 	<!--<ul class="nav nav-pills nav-justified">
 		<li><a href="#">Carrito</a></li>
@@ -21,9 +18,34 @@
 				</form>
 				<!--A la parte izquierda right-->
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="#">Cuenta</a></li>
+					
 					<li><a href="#">Carrito</a></li>
-		
+
+					<li><a href="<?= base_url()?>productos">Gestionar Productos</a></li>
+					<?php if ($this->session->userdata('login')) { ?>
+						
+						<li><a href="<?= base_url()?>login/logout">Cerra Session</a></li>
+
+					<?php } else { ?>
+
+					<li class="dropdown">
+                      <a class='dropdown-toggle' href='#' data-toggle='dropdown' style="background: none;">INICIAR SESION ... <strong class='caret'></strong></a>
+                      <div class='dropdown-menu' style='padding: 10px; padding-bottom: 0px; background: none; width: 400px;'>
+                        <form action="<?= base_url()?>login" method='post' accept-charset='UTF-8' role="form">
+                          <div class="form-group">
+                            <input class='form-control large' style='text-align: center;' type='text' name='user' placeholder='usuario'/>
+                          </div>
+                          <div class='form-group'>
+                            <input class='form-control large' style='text-align: center;' type='password' name='password' placeholder='contraseña' />
+                          </div>
+                          <div class='form-group'>
+                            <button class='btn btn-primary' style='width: 380px;' type='submit'>INGRESAR</button>
+                          </div>
+                          </form>
+                      </div>
+                    </li>
+
+                    <?php } ?>
 
 				</ul>
 			</div>
@@ -52,139 +74,62 @@
 
 				
 
-			<h2>Precios</h2>
-			<p>Max : 300</p>
-		    <p>Min : 200</p>
+				<h2>Precios</h2>
+				<p>Max : 300</p>
+		    	<p>Min : 200</p>
 	  
-  <div class="col-xs-3">
-    <input type="text" class="form-control" placeholder="Max">
-  </div>
+  				<div class="col-xs-3">
+    				<input type="text" class="form-control" placeholder="Max">
+  				</div>
 
-  <div class="col-xs-3">
-    <input type="text" class="form-control" placeholder="Min">
-  </div>
+  				<div class="col-xs-3">
+    				<input type="text" class="form-control" placeholder="Min">
+  				</div>
 
- <div class="col-xs-3">
- <button class="btn btn-primary"> ---> </button>
-</div>
-</div>
-
-
-	<div class="col-md-8 ">
-				<h2>Productos</h2>
-           
-           	<div  class="row">
-           	<div class="panel panel-default">
-  <div class="panel-heading">Catalogo del producto</div>
-  <div class="panel-body">
-
-
-
-<div class="col-lg-4">
-        
-          <a href="htc-desire-620-dual-sim.php">
-          <img src="<?= base_url()?>plantilla/img/computador/comput1.png" alt="Generic placeholder image" class="col-lg-6"></a>
-          
-          <h2>HTC Desire 620</h2>
-          <p><span class="badge">Precio $USD</span></p>
-          <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis 
-euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi 
-leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo
- cursus magna.</p>
-          <p>
-        
-  </button>  <button type="button" class="btn btn-info" data-toggle="tooltip" data-placement="bottom" title="Añadir este producto al carrito">Comprar <i class="fa fa-shopping-cart"></i>
-</button>
-
-</div>
-
-<div class="col-lg-4">
-        
-          <a href="htc-desire-620-dual-sim.php">
-          <img src="<?= base_url()?>plantilla/img/computador/comput2.png" alt="Generic placeholder image" class="col-lg-6"></a>
-          
-          <h2>HTC Desire 620</h2>
-          <p><span class="badge">Precio $USD</span></p>
-          <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis 
-euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi 
-leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo
- cursus magna.</p>
-          <p>
-  
-  </button>  <button type="button" class="btn btn-info" data-toggle="tooltip" data-placement="bottom" title="Añadir este producto al carrito">Comprar <i class="fa fa-shopping-cart"></i>
-</button>
-
-</div>
-
-<div class="col-lg-4">
-        
-          <a href="htc-desire-620-dual-sim.php">
-          <img src="<?= base_url()?>plantilla/img/computador/comput1.png" alt="Generic placeholder image" class="col-lg-6"></a>
-          
-          <h2>HTC Desire 620</h2>
-          <p><span class="badge">Precio $USD</span></p>
-          <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis 
-euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi 
-leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo
- cursus magna.</p>
-          <p>
-        
-  </button>  <button type="button" class="btn btn-info" data-toggle="tooltip" data-placement="bottom" title="Añadir este producto al carrito">Comprar <i class="fa fa-shopping-cart"></i>
-</button>
-
-</div>
-
-
-<div class="col-lg-4">
-        
-          <a href="htc-desire-620-dual-sim.php">
-          <img src="<?= base_url()?>plantilla/img/computador/comput1.png" alt="Generic placeholder image" class="col-lg-6"></a>
-          
-          <h2>HTC Desire 620</h2>
-          <p><span class="badge">Precio $USD</span></p>
-          <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis 
-euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi 
-leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo
- cursus magna.</p>
-          <p>
-        
-  </button>  <button type="button" class="btn btn-info" data-toggle="tooltip" data-placement="bottom" title="Añadir este producto al carrito">Comprar <i class="fa fa-shopping-cart"></i>
-</button>
-
-</div>
-
-
-
-
- 
-  </div>
-</div>
-
-
-           	
-           	</div>
-         
-			</div>
-		</div>
-	</div>
-
-	
-
-         
-
+ 				<div class="col-xs-3">
+ 					<button class="btn btn-primary"> > </button>
+				</div>
 			</div>
 			
-		</div>
-		
+			<!---->
+			<div class="col-md-8 ">
+				<h2>Productos</h2>
+           		 <div class="panel panel-default">
+  				 <div class="panel-heading">Catalogo del Productos</div>
+  					<div class="panel-body">
+					
+						
+						<div class="col-lg-10">
+       						<?php foreach ($listaProductos->result() as $producto) { ?>
+          					<a href="htc-desire-620-dual-sim.php">
+          					<img src="<?= base_url()?>plantilla/img/computador/comput1.png" alt="Generic placeholder image" class="col-lg-6"></a>
+          
+          					<h2><?= $producto->PRO_NOMBRE?></h2>
+          					<p><span class="badge"><?= $producto->PRO_PRECIO?></span></p>
+          					<p><?= $producto->PRO_DETALLE?></p>
+         					 <p>
+        
+ 					 		<button type="button" class="btn btn-info" data-toggle="tooltip" data-placement="bottom" title="Añadir este producto al carrito">
+ 	 						Comprar 
+ 	 						<i class="fa fa-shopping-cart">
+ 	 		
+ 	 						</i>
+							</button>
+							<?php } ?>
+						</div>
+						
+
+						</div>
+
+           			</div>
+    		</div>
+			<!---->
+
+    	</div>
+
+     				
 	</div>
-
 	
-		
-
-
-
-
-
 
 
 	<!--Eventos-->

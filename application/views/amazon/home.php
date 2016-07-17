@@ -40,9 +40,11 @@
 		<div class="row">
 			<div class="col-md-4 ">
 				<h2>Categorias</h2>
-				<p>Computadores</p>
-				<p>Celulares</p>
-				<p>Audio</p>
+				<?php foreach ($consulta->result() as $fila) { ?>
+				
+				<p><?= $fila->CAT_NOMBRE ?></p>
+				
+				<?php } ?>
 			</div>
 			<div class="col-md-4 col-md-offset-4">
 				

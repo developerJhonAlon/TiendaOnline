@@ -1,4 +1,7 @@
 <body>
+
+
+
 	
 	<!--<ul class="nav nav-pills nav-justified">
 		<li><a href="#">Carrito</a></li>
@@ -20,7 +23,7 @@
 				<ul class="nav navbar-nav navbar-right">
 					<li><a href="#">Cuenta</a></li>
 					<li><a href="#">Carrito</a></li>
-					<li><a href="#">Gestionar Productos</a></li>
+		
 
 				</ul>
 			</div>
@@ -44,20 +47,145 @@
 				
 				<p><?= $fila->CAT_NOMBRE ?></p>
 				
+				
 				<?php } ?>
-			</div>
-			<div class="col-md-4 col-md-offset-4">
-				
-				<h2>Productos</h2>
-				<!-- Esto se traduce haci <img src="localhost:81/plantilla/img/comput1.png" >-->
-				<img src="<?= base_url()?>plantilla/img/comput1.png" >
 
-				<img src="<?= base_url()?>plantilla/img/comput2.png" >
 				
-				
+
+			<h2>Precios</h2>
+			<p>Max : 300</p>
+		    <p>Min : 200</p>
+	  
+  <div class="col-xs-3">
+    <input type="text" class="form-control" placeholder="Max">
+  </div>
+
+  <div class="col-xs-3">
+    <input type="text" class="form-control" placeholder="Min">
+  </div>
+
+ <div class="col-xs-3">
+ <button class="btn btn-primary"> ---> </button>
+</div>
+</div>
+
+
+	<div class="col-md-8 ">
+				<h2>Productos</h2>
+           
+           	<div  class="row">
+           	<div class="panel panel-default">
+  <div class="panel-heading">Catalogo del producto</div>
+  <div class="panel-body">
+
+
+
+<div class="col-lg-4">
+        
+          <a href="htc-desire-620-dual-sim.php">
+          <img src="<?= base_url()?>plantilla/img/computador/comput1.png" alt="Generic placeholder image" class="col-lg-6"></a>
+          
+          <h2>HTC Desire 620</h2>
+          <p><span class="badge">Precio $USD</span></p>
+          <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis 
+euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi 
+leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo
+ cursus magna.</p>
+          <p>
+        
+  </button>  <button type="button" class="btn btn-info" data-toggle="tooltip" data-placement="bottom" title="Añadir este producto al carrito">Comprar <i class="fa fa-shopping-cart"></i>
+</button>
+
+</div>
+
+<div class="col-lg-4">
+        
+          <a href="htc-desire-620-dual-sim.php">
+          <img src="<?= base_url()?>plantilla/img/computador/comput2.png" alt="Generic placeholder image" class="col-lg-6"></a>
+          
+          <h2>HTC Desire 620</h2>
+          <p><span class="badge">Precio $USD</span></p>
+          <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis 
+euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi 
+leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo
+ cursus magna.</p>
+          <p>
+  
+  </button>  <button type="button" class="btn btn-info" data-toggle="tooltip" data-placement="bottom" title="Añadir este producto al carrito">Comprar <i class="fa fa-shopping-cart"></i>
+</button>
+
+</div>
+
+<div class="col-lg-4">
+        
+          <a href="htc-desire-620-dual-sim.php">
+          <img src="<?= base_url()?>plantilla/img/computador/comput1.png" alt="Generic placeholder image" class="col-lg-6"></a>
+          
+          <h2>HTC Desire 620</h2>
+          <p><span class="badge">Precio $USD</span></p>
+          <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis 
+euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi 
+leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo
+ cursus magna.</p>
+          <p>
+        
+  </button>  <button type="button" class="btn btn-info" data-toggle="tooltip" data-placement="bottom" title="Añadir este producto al carrito">Comprar <i class="fa fa-shopping-cart"></i>
+</button>
+
+</div>
+
+
+<div class="col-lg-4">
+        
+          <a href="htc-desire-620-dual-sim.php">
+          <img src="<?= base_url()?>plantilla/img/computador/comput1.png" alt="Generic placeholder image" class="col-lg-6"></a>
+          
+          <h2>HTC Desire 620</h2>
+          <p><span class="badge">Precio $USD</span></p>
+          <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis 
+euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi 
+leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo
+ cursus magna.</p>
+          <p>
+        
+  </button>  <button type="button" class="btn btn-info" data-toggle="tooltip" data-placement="bottom" title="Añadir este producto al carrito">Comprar <i class="fa fa-shopping-cart"></i>
+</button>
+
+</div>
+
+
+
+
+ 
+  </div>
+</div>
+
+
+           	
+           	</div>
+         
 			</div>
 		</div>
 	</div>
+
+	
+
+         
+
+			</div>
+			
+		</div>
+		
+	</div>
+
+	
+		
+
+
+
+
+
+
 
 	<!--Eventos-->
 
@@ -66,7 +194,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
      
 	<!--Eventos-->
-
 
 </body>
 </html>

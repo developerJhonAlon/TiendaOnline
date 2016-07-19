@@ -66,9 +66,9 @@
                         </button>
 						</td>";
 						$content .= "<td style='text-align: center;'>
-						<button>
+						<a href='". base_url('/productos/editar/')."/$row->PRO_ID'>
 						   <span class='glyphicon glyphicon-pencil' aria-hidden='true'/>
-						</button>
+						</a>
 						</td>";
 					
 					$content .= "</tr>";

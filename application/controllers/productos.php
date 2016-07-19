@@ -20,16 +20,35 @@ class Productos extends CI_Controller{
     public function editar($value = '')
     {
     	$this->load->view("amazon/headers");
-    	
+    	$this->load->helper('bootstrap'); 
+
     	$this->load->model('producto');
     	$fila = $this->producto->getProductoById($value);
    		$data = array('datosEditar' => $fila );
     	$this->load->view("amazon/editar",$data);
     }
 
-    public function editarInformacion($value = '')
+    public function editarInformacion()
     {
-    	$this->index();
+        
+        $post = $this->input->post();
+
+        $data['PRO_NOMBRE'] = $post['nombre'];
+        $data['PRO_DETALLE'] = $post['detalle'];
+        $data['PRO_PRECIO'] = $post['precio'];
+        $data['PRO_STOCK'] = $post['stock'];
+
+        //$this->load->model('producto');
+        $this->db->where("PRO_ID",$post['id']);
+        if ($this->db->update("producto",$data)) {
+
+             header("Location: ".base_url('productos'));
+
+        } else {
+
+           echo "no se puede actualizar";
+        }
+        
     }
 
      public function ver($value = '')
@@ -62,7 +81,7 @@ class Productos extends CI_Controller{
         $bool = $this->producto->insert($post);
         if ($bool) {
             header("Location: ".base_url()."productos");
-        } else {
+        } else {    
             header("Location: ".base_url()."productos/agregar");
         }
         

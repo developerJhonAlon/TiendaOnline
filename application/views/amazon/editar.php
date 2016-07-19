@@ -29,45 +29,36 @@
 
 	<div class="container">
 		<div class="row">
-			
 				<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1" >
-			       <form name="form" action="<?= base_url()?>/productos/editarInformacion" method="post">
-            
-			            <div class="form-group">
-			               <label for="nombrePro">Nombre:</label>
-			               <!--name es el identificador para recibirlo en el backend-->
-			               <input type="text" class="form-control" id="nombrePro" 
-			                      placeholder="Nombre" value="<?= $datosEditar->PRO_NOMBRE?>">
-			            </div>
+					   <?php 
+					    //form_open_multipart Nos ayuda a subir archivos al formulario
+					   	echo form_open_multipart("productos/editarInformacion");
 
-			             <div class="form-group">
-			               <label for="descripcionPro">Descripción:</label>
-			               <input type="text" class="form-control" id="descripcionPro" 
-			                      placeholder="Descripcion" value="<?= $datosEditar->PRO_DETALLE?>">
-			            </div>
+					   	$attribs = array('style' => 'display:none','value' => $datosEditar->PRO_ID);
+					    echo form_input_text('id', '',$attribs);
 
-						<div class="form-group">
-			               <label for="precioPro">Precio:</label>
-			               <input type="text" class="form-control" id="precioPro" 
-			                      placeholder="Precio" value="<?= $datosEditar->PRO_PRECIO?>">
-			            </div>
+					   	$attribs = array('value' => $datosEditar->PRO_NOMBRE);
+					    echo form_input_text('nombre', 'Ingresa nombre',$attribs);
 
-			            <div class="form-group">
-			               <label for="precioPro">Stock:</label>
-			               <input type="text" class="form-control" id="precioStock" 
-			                      placeholder="Stock" value="<?= $datosEditar->PRO_STOCK?>">
-			            </div>
-           
-			            <button type="submit" class="btn btn-default">Enviar</button>
-       				 </form>
+					    
+					    echo form_input_textarea('detalle','Ingresa una descripción');
 
+					    $attribs = array('value' =>  $datosEditar->PRO_PRECIO);
+					    echo form_input_text('precio', 'Ingrese el Precio',$attribs);
+					    
+					    $attribs = array('value' =>  $datosEditar->PRO_STOCK);
+					    echo form_input_text('stock', 'Ingresar stock',$attribs);
+					
+
+					    echo form_submit("Modificar Producto");
+					    echo form_close(); 
+
+					   ?>
 
 
 				</div>
-
 		</div>     
 	</div>
-	  
 
 		   
 	<!--Eventos-->
@@ -77,7 +68,12 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
      
 	<!--Eventos-->
-
-
+	<script>
+		$(document).ready(function () {
+			//obtener el area de Texto y pasarle todo.
+			$("#detalle").val("<?php echo  $datosEditar->PRO_DETALLE?>");
+		});
+	</script>
+	
 </body>
 </html>

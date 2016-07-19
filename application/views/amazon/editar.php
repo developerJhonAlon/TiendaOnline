@@ -1,26 +1,14 @@
 <body>
 	
-	<!--<ul class="nav nav-pills nav-justified">
-		<li><a href="#">Carrito</a></li>
-		<li><a href="#">Crear Usuario</a></li>
-		
-	</ul>-->
 	<nav class="navbar navbar-default">
 		<div class="container-fluid">
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<!--A la parte derecha_left-->
-				<form  class="navbar-form navbar-left">
-					<div class="form-group">
-						<input type="text" class="form-control" placeholder="buscar">
-
-					</div>
-					<button class="btn btn-primary">Buscar</button>
-				</form>
+				<h1>Administración</h1>
 				<!--A la parte izquierda right-->
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="#">Cuenta</a></li>
-					<li><a href="#">Carrito</a></li>
-					<li><a href="<?= base_url()?>producto">Gestionar Productos</a></li>
+					
+					<li><a href="<?= base_url()?>productos" >Gestionar Productos</a></li>
 
 				</ul>
 			</div>
@@ -29,48 +17,59 @@
 	</nav>
 
 
-	<div class="col-lg-12">
+	<div class="col-lg-8">
 		<h1>Amazon Ec</h1>
-		<h2>Editar</h2>
+		<h2>Editar Producto</h2>
+			<a href="htc-desire-620-dual-sim.php">
+                 <img src="<?= base_url()?>public/img/<?= $datosEditar->PRO_IMAGEN?>" alt="Imagen no disponible" class="col-lg-4">
+             </a>	
+		
 		
 	</div>
 
 	<div class="container">
-		 <form name="form" action="<?= base_url()?>/productos/editarInformacion" method="post">
+		<div class="row">
+			
+				<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1" >
+			       <form name="form" action="<?= base_url()?>/productos/editarInformacion" method="post">
             
-            <div class="form-group">
-               <label for="nombrePro">Nombre:</label>
-               <!--name es el identificador para recibirlo en el backend-->
-               <input type="text" class="form-control" id="nombrePro" 
-                      placeholder="Nombre" value="<?= $datosEditar->PRO_NOMBRE?>">
-            </div>
+			            <div class="form-group">
+			               <label for="nombrePro">Nombre:</label>
+			               <!--name es el identificador para recibirlo en el backend-->
+			               <input type="text" class="form-control" id="nombrePro" 
+			                      placeholder="Nombre" value="<?= $datosEditar->PRO_NOMBRE?>">
+			            </div>
 
-             <div class="form-group">
-               <label for="descripcionPro">Descripción:</label>
-               <input type="text" class="form-control" id="descripcionPro" 
-                      placeholder="Descripcion" value="<?= $datosEditar->PRO_DETALLE?>">
-            </div>
+			             <div class="form-group">
+			               <label for="descripcionPro">Descripción:</label>
+			               <input type="text" class="form-control" id="descripcionPro" 
+			                      placeholder="Descripcion" value="<?= $datosEditar->PRO_DETALLE?>">
+			            </div>
 
-			<div class="form-group">
-               <label for="precioPro">Precio:</label>
-               <input type="text" class="form-control" id="precioPro" 
-                      placeholder="Precio" value="<?= $datosEditar->PRO_PRECIO?>">
-            </div>
+						<div class="form-group">
+			               <label for="precioPro">Precio:</label>
+			               <input type="text" class="form-control" id="precioPro" 
+			                      placeholder="Precio" value="<?= $datosEditar->PRO_PRECIO?>">
+			            </div>
 
-            <div class="form-group">
-               <label for="precioPro">Stock:</label>
-               <input type="text" class="form-control" id="precioStock" 
-                      placeholder="Stock" value="<?= $datosEditar->PRO_STOCK?>">
-            </div>
+			            <div class="form-group">
+			               <label for="precioPro">Stock:</label>
+			               <input type="text" class="form-control" id="precioStock" 
+			                      placeholder="Stock" value="<?= $datosEditar->PRO_STOCK?>">
+			            </div>
+           
+			            <button type="submit" class="btn btn-default">Enviar</button>
+       				 </form>
 
-            
-            <button type="submit" class="btn btn-default">Enviar</button>
-        </form>
 
 
+				</div>
+
+		</div>     
 	</div>
+	  
 
-	   
+		   
 	<!--Eventos-->
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>

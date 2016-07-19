@@ -26,6 +26,7 @@
 						
 						<li><a href="<?= base_url()?>login/logout">Cerra Session</a></li>
 
+
 					<?php } else { ?>
 
 					<li class="dropdown">
@@ -41,7 +42,7 @@
                           <div class='form-group'>
                             <button class='btn btn-primary' style='width: 380px;' type='submit'>INGRESAR</button>
                           </div>
-                          </form>
+                         </form>
                       </div>
                     </li>
 
@@ -102,7 +103,7 @@
 						<div class="col-lg-10">
        						<?php foreach ($listaProductos->result() as $producto) { ?>
           					<a href="htc-desire-620-dual-sim.php">
-          					<img src="<?= base_url()?>plantilla/img/computador/comput1.png" alt="Generic placeholder image" class="col-lg-6"></a>
+          					<img src="<?= base_url()?>plantilla/img/computador/comput1.png" alt="Imagen no disponible" class="col-lg-6"></a>
           
           					<h2><?= $producto->PRO_NOMBRE?></h2>
           					<p><span class="badge"><?= $producto->PRO_PRECIO?></span></p>

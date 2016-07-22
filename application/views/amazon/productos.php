@@ -12,6 +12,10 @@
 				<h1>Administración de Productos</h1>
 				<!--A la parte izquierda right-->
 				<ul class="nav navbar-nav navbar-right">
+					<?php if ($this->session->userdata('login')) { ?>
+					<li><a href="<?= base_url()?>administrador/logout">Cerrar Sessión</a></li>
+					
+					<?php } ?>
 					
 					<li><a href="<?= base_url()?>productos">Gestionar Productos</a></li>
 

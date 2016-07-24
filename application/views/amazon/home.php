@@ -112,7 +112,7 @@
        						<?php foreach ($listaProductos->result() as $producto) { ?>
           					<a href="htc-desire-620-dual-sim.php">
           					<img src="<?= base_url()?>public/img/<?= $producto->PRO_IMAGEN?>" alt="Generic placeholder image" class="col-lg-6"></a>         				
-          					<p><?= $producto->PRO_NOMBRE?></p>
+          					<p><strong><?= $producto->PRO_NOMBRE?></strong></p>
           					<p><span class="badge"><?= $producto->PRO_PRECIO?></span></p>
           					<button type="button" class="btn btn-info" data-toggle="tooltip" data-placement="bottom" title="Añadir este producto al carrito">
  	 						Comprar 

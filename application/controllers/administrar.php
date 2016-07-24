@@ -6,7 +6,7 @@
 class Administrar extends CI_Controller
 {
 
-	public function index($value='')
+	public function index()
 	{
 		$this->load->view("amazon/headers");
 	    $this->load->helper('bootstrap');  
@@ -24,7 +24,7 @@ class Administrar extends CI_Controller
 		$fila = $this->administrador->getUser($user);
 		if ($fila != null) {
 			if ($fila->ADM_CLAVE == $pass ) {
-				$data = array('user' => $user,'id' => $fila->ADM_ID, 'login' => true );
+				$data = array('user' => $user,'id' => $fila->ADM_ID, 'loginAdmin' => true );
 				$this->session->set_userdata($data);
 				header("Location: ".base_url()."productos/");
 			} else {
@@ -39,9 +39,10 @@ class Administrar extends CI_Controller
 
 	}
 
-	public function logout($value='')
+	public function logout()
 	{
-		$this->session->session_destroy();
+
+		$this->session->sess_destroy();
 		header("Location: ".base_url()."administrar/");
 	}
 	

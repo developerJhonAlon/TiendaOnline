@@ -4,7 +4,7 @@
 		<div class="container-fluid">
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<!--A la parte derecha_left-->
-				<h1>Administración</h1>
+				<h1>Administración de Productos</h1>
 				<!--A la parte izquierda right-->
 				<ul class="nav navbar-nav navbar-right">
 					
@@ -63,10 +63,9 @@
 		   
 	<!--Eventos-->
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="<?= base_url()?>public/js/jquery.min.js"></script>
     <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-     
+    <script src="<?= base_url()?>public/js/bootstrap.min.js"></script>  
 	<!--Eventos-->
 	<script>
 		$(document).ready(function () {

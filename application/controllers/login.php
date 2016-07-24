@@ -22,6 +22,8 @@ class Login extends CI_Controller
 				$data = array('user' => $user, 'id' => $fila->USU_ID, 'login' => true );
 				//colocar datos a una variable de Session
 				$this->session->set_userdata($data);
+				header("Location: ".base_url());
+
 			} else {
 				//si el usuario no se Logeo correctamente se va al inicio
 				header("Location: ".base_url());

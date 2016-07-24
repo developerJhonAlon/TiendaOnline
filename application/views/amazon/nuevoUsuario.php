@@ -15,15 +15,16 @@
 				<div class="col-md-4 ">
 
 					<h1>Amazon Ec</h1>
-					<h3>Administración de Productos</h3>
+					<h3>Crear Cuenta</h3>
 					<br>
 				
 					   <?php 
-					    //form_open_multipart Nos ayuda a subir archivos al formulario
-					   	echo form_open("administrar/login");
-					    echo form_input_text('user', 'Ingresa el usuario');
-					    echo form_input_password('pass','Ingrese la clave');
-					    echo form_submit("Sign in");
+					   	echo form_open("usuarios/nuevo");
+					    echo form_input_text('nombre', 'Ingrese sus nombres');
+					    echo form_input_text('apellido', 'Ingrese sus apellidos');
+					    echo form_input_text('correo', 'Ingrese su correo');
+					    echo form_input_password('pass','Ingrese un clave');
+					    echo form_submit("Registrar");
 					    echo form_close(); 
 					   ?>
 

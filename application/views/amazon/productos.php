@@ -12,12 +12,8 @@
 				<h1>Administración de Productos</h1>
 				<!--A la parte izquierda right-->
 				<ul class="nav navbar-nav navbar-right">
-					<?php if ($this->session->userdata('login')) { ?>
-					<li><a href="<?= base_url()?>administrador/logout">Cerrar Sessión</a></li>
 					
-					<?php } ?>
-					
-					<li><a href="<?= base_url()?>productos">Gestionar Productos</a></li>
+					<li><a href="<?= base_url()?>administrar/logout">Cerrar Sessión</a></li>
 
 				</ul>
 			</div>
@@ -91,9 +87,9 @@
 	   
 	<!--Eventos-->
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="<?= base_url()?>public/js/jquery.min.js"></script>
     <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="<?= base_url()?>public/js/bootstrap.min.js"></script>
      
 	<!--Eventos-->
 

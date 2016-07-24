@@ -8,7 +8,7 @@ class Productos extends CI_Controller{
     public function index()
     {
         
-        if ($this->session->userdata('login')) {
+        if ($this->session->userdata('loginAdmin')) {
             $this->load->view("amazon/headers");
             $this->load->model('producto');
             $listproductos = $this->producto->getProducto();    
@@ -26,11 +26,13 @@ class Productos extends CI_Controller{
     public function editar($value = '')
     {
 
-        if ($this->session->userdata('login')) {
+        if ($this->session->userdata('loginAdmin')) {
             $this->load->view("amazon/headers");
             $this->load->helper('bootstrap'); 
 
             $this->load->model('producto');
+            //Recibe el ojeto como una fila de los modelos y esta debe ser...
+            //... enviado a un array para poder enviar a la pagina.
             $fila = $this->producto->getProductoById($value);
             $data = array('datosEditar' => $fila );
             $this->load->view("amazon/editar",$data);
@@ -44,7 +46,7 @@ class Productos extends CI_Controller{
 
     public function editarInformacion()
     {
-        if ($this->session->userdata('login')) {
+        if ($this->session->userdata('loginAdmin')) {
             $post = $this->input->post();
 
             $data['PRO_NOMBRE'] = $post['nombre'];
@@ -73,7 +75,7 @@ class Productos extends CI_Controller{
 
      public function ver($value = '')
     {
-        if ($this->session->userdata('login')) {
+        if ($this->session->userdata('loginAdmin')) {
                 
             $this->load->view("amazon/headers");
             
@@ -90,11 +92,12 @@ class Productos extends CI_Controller{
     
     public function agregar($value='')
     {
-        if ($this->session->userdata('login')) {
+        if ($this->session->userdata('loginAdmin')) {
             $this->load->view("amazon/headers");
             //helper de un Tercero, este ayuda a que el formulario tome los estilos de bootstrap, porque si se usa...
             //.... el helper de Form de codigniter este no toma los estilos.
             $this->load->helper('bootstrap');  
+            
             $this->load->view("amazon/nuevoProducto");
         } else {
             header("Location: ".base_url()."administrador/");
@@ -106,7 +109,7 @@ class Productos extends CI_Controller{
 
     public function nuevo(){
         //obtener todo lo que hay en url del post
-        if ($this->session->userdata('login')) {
+        if ($this->session->userdata('loginAdmin')) {
             $post = $this->input->post();
             $this->load->model('file');
             // ./ (acceso a la raiz)
@@ -132,7 +135,7 @@ class Productos extends CI_Controller{
     //esta funcion es llamada por AJAX y devuelve lo que encuentra en echo
     public function delete()
     {
-        if ($this->session->userdata('login')) {
+        if ($this->session->userdata('loginAdmin')) {
             $post = $this->input->post();
             $prodname = $post['prodname'];
             $prodid = $post['id'];

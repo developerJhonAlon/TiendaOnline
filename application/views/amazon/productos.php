@@ -110,7 +110,8 @@
 					
 					//ajax; q mantenga una solicitud, envio de peticion al Servidor
 					var request;
-					//Si ya existe una conexion no vuelva a ejecutar, para que sea asincrono
+					//Si ya existe una conexion no vuelva a ejecutar, para que sea...
+					//... asincrono(para muchas conexiones)
 					if (request) {
 						request.abort();
 					}

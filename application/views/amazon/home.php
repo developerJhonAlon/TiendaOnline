@@ -5,11 +5,9 @@
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<!--A la parte derecha_left-->
 				<form  class="navbar-form navbar-left">
-					<div class="form-group">
-						<input type="text" class="form-control" placeholder="buscar">
-
-					</div>
-					<button class="btn btn-primary">Buscar</button>
+					
+				    <input id="txtBuscar" type="text" class="form-control" placeholder="buscar">
+					<button id="btnBuscar" class="btn btn-primary">Buscar</button>
 				</form>
 				<!--A la parte izquierda right-->
 				<ul class="nav navbar-nav navbar-right">
@@ -143,6 +141,16 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="<?= base_url()?>public/js/bootstrap.min.js"></script>  
 	<!--Eventos-->
+	<script>
 
+	$(document).on("ready",function () {
+		$('#btnBuscar').on("click", function () {
+			alert('hola mundo');
+
+		});
+	});
+
+
+	</script>
 </body>
 </html>

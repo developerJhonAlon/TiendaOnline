@@ -27,6 +27,16 @@ class Home extends CI_Controller
 			$data = array('consulta' => $result , 'listaProductos' => $productos);
 			$this->load->view("amazon/home",$data);
 		}	
+
+
+	public function AllProdutos()
+	{
+		$this->load->model('producto');
+		$result = $this->producto->getProducto();
+		$data = array('listaProductos' => $result );
+		print_r(json_encode($data));
+
+	}
  	
 }
 

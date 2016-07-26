@@ -29,13 +29,29 @@ class Home extends CI_Controller
 		}	
 
 
-	public function AllProdutos()
+	public function obtenerListaProductos()
 	{
 		$this->load->model('producto');
 		$result = $this->producto->getProducto();
 		$data = array('listaProductos' => $result );
 		print_r(json_encode($data));
+		exit;
+	}
 
+	public function obtenerProducto()
+	{
+		//variable que viene del AJAX
+		$nombre = $this->input->get("nombreProducto");
+		$this->load->model('producto');
+
+		//La consulta retorna un array de Objetos y estos se los..
+		//... pasa al array para ser transformado en JSON
+		$datos = $this->producto->consultarProducto($nombre);
+		
+		$data = array('listaProductos' => $datos );
+		echo json_encode($data);
+		
+		
 	}
  	
 }

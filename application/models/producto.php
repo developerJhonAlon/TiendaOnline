@@ -41,6 +41,17 @@ class Producto extends CI_Model
 		
 	}
 
+	public function consultarProducto($value='')
+	{
+	 	$datos = $this->db->query("SELECT * FROM producto WHERE PRO_NOMBRE 
+	 		LIKE '%$value%' ORDER BY PRO_NOMBRE ASC");
+		//ahora se retorna transformandolo a un array de objetos porque...
+		//...de esta manera se puede enviar al JSON
+		//... Object {listaProductos: Array[1]}
+        //... Object {listaProductos: Array[2]}
+		return $datos->result();
+	}	
+
 	
 }
  ?>

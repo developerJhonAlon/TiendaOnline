@@ -31,9 +31,10 @@ class Home extends CI_Controller
 
 	public function obtenerListaProductos()
 	{
+		$nombre = $this->input->get('nombreProducto');
 		$this->load->model('producto');
-		$result = $this->producto->getProducto();
-		$data = array('listaProductos' => $result );
+		$datos = $this->producto->consultarListaProductos();
+		$data = array('productos' => $datos );
 		print_r(json_encode($data));
 		exit;
 	}

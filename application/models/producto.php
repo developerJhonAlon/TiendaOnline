@@ -52,6 +52,12 @@ class Producto extends CI_Model
 		return $datos->result();
 	}	
 
+	public function consultarListaProductos()
+	{
+		$datos = $this->db->get('producto');
+		return $datos->result();
+	}
+
 	
 }
  ?>
